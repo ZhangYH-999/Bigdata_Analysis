@@ -12,23 +12,20 @@ Some data analysis projects, includes simple business analysis in different fiel
 
 
 
-### [1. Banke takeaway data analysis](https://github.com/ZhangYH-999/Bigdata_Analyse/blob/main/Takeaway%20Data/%E6%8B%8C%E5%AE%A2%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90.md)
+### [1. Banke takeaway data analysis](Takeaway Data Analysis/Banke_data_analysis.md)
 Use Excel, Tableau to crate analysis report
-</br>
+
 
 ### [2. Tmall order data analysis](Tmall/Tmall_order.ipynb)
 Clean and analyse the data by panda, and data visualize by matplotlib, create simple report by Excel
 
 
-
-continue to update...
-
-
-
-### 3. COVID-19 data analysis
-
+### [3. COVID-19 data analysis](COVID19 Data Analysis/covid-19 data analysis.ipynb)
 Use pandas clean and analyze the data and visualize data by matplotlib and tableau
 
+
+
+continue to update...
 
 
 ### 4. Real-time analysis of 10 million Taobao user behavior data

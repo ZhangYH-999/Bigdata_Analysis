@@ -2,7 +2,7 @@
 /shelf/
 /workspace.xml
 # Datasource local storage ignored files
-/../../../../../:\Project_Jupyter_NoteBook\data_analyse\COVID19 Data Analysis\.idea/dataSources/
+/../../../../:\Project_Jupyter_NoteBook\data_analyse\.idea/dataSources/
 /dataSources.local.xml
 # Editor-based HTTP Client requests
 /httpRequests/
