@@ -12,7 +12,7 @@ Some data analysis projects, includes simple business analysis in different fiel
 
 
 
-### [1. Banke takeaway data analysis](Takeaway Data Analysis/Banke_data_analysis.md)
+### [1. Banke takeaway data analysis](Takeaway_Data_Analysis/Banke_data_analysis.md)
 Use Excel, Tableau to crate analysis report
 
 
@@ -20,7 +20,7 @@ Use Excel, Tableau to crate analysis report
 Clean and analyse the data by panda, and data visualize by matplotlib, create simple report by Excel
 
 
-### [3. COVID-19 data analysis](COVID19 Data Analysis/covid-19 data analysis.ipynb)
+### [3. COVID-19 data analysis](COVID-19_Data_Analysis/covid-19_data_analysis.ipynb)
 Use pandas clean and analyze the data and visualize data by matplotlib and tableau
 
 
