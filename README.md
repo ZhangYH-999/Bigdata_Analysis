@@ -12,25 +12,25 @@ Some data analysis projects, includes simple business analysis in different fiel
 
 
 
-### [0. MOMO user analysis](./MOMO_user_analysis/momo_hadoop&hive.md)
+### [0. MOMO user analysis](./0.MOMO_user_analysis/momo_hadoop&hive.md)
 
 Deploy Hadoop, Hive. Import and ETL data through DataGrip base on Hive, and finally create a simple dashboard through Tableau
 
 
 
-### [1. Banke takeaway data analysis](Takeaway_Data_Analysis/Banke_data_analysis.md)
+### [1. Banke takeaway data analysis](1.Takeaway_Data_Analysis/Banke_data_analysis.md)
 Use Excel, Tableau to crate analysis report
 
 
 
 
-### [2. Tmall order data analysis](Tmall/Tmall_order.ipynb)
+### [2. Tmall order data analysis](2.Tmall/Tmall_order.ipynb)
 Clean and analyse the data by panda, and data visualize by matplotlib, create simple report by Excel
 
 
 
 
-### [3. COVID-19 data analysis](COVID-19_Data_Analysis/covid-19_data_analysis.ipynb)
+### [3. COVID-19 data analysis](3.COVID-19_Data_Analysis/covid-19_data_analysis.ipynb)
 Use pandas clean and analyze the data and visualize data by matplotlib and tableau
 
 
