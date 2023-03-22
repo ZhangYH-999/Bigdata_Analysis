@@ -4,7 +4,9 @@
 
 通过3台CentOS 7 虚拟机模拟Hadoop环境，部署Hadoop，Hive。其中Hive通过MySQL作为Metastore的后端数据库。通过DataGrip的远程连接的方式对进行数据的ETL，最后使用TabLeau对数据进行简单的可视化分析。
 
-**Tableau：**
+[Hadoop and Hive note](./Hadoop_Hive.md)
+
+**Tableau Dash Board：**
 
 ![image-20230322105430291](momo_hadoop&hive.assets/image-20230322105430291.png)
 
