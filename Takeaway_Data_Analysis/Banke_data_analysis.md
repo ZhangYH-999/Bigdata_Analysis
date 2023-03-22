@@ -1,170 +1,10 @@
+## Banke Takeaway Data
 
+[TOC]
 
-### 一、Excel
+### 1. Excel Report
 
-建立副本备份数据
-
-
-
-Ctrl + Shift + L 筛选器
-
-
-
-#### 1.1 数据透视图
-
-（1）插入空白数据透视
-
-<img src="image.assets/image-20220805153340250.png" alt="image-20220805153340250" style="zoom:80%;" />
-
-
-
-（2）设置数据透视图字段填充数据透视表
-
-<img src="image.assets/image-20220805153443145.png" alt="image-20220805153443145" style="zoom: 67%;" />
-
-<img src="image.assets/image-20220805154059968.png" alt="image-20220805154059968" style="zoom:67%;" />
-
-（3）插入自定义计算字段
-
-<img src="image.assets/image-20220805153806196.png" alt="image-20220805153806196" style="zoom: 67%;" />
-
-<img src="image.assets/image-20220805154145800.png" alt="image-20220805154145800" style="zoom:67%;" />
-
-（4）插入悬浮切片器（同时应用于其他sheet）
-
-<img src="image.assets/image-20220805153915564.png" alt="image-20220805153915564" style="zoom:67%;" />
-
-<img src="image.assets/image-20220805154003374.png" alt="image-20220805154003374" style="zoom:67%;" />
-
-
-
-
-
-（5）数据透视图
-
-<img src="image.assets/image-20220805155119838.png" alt="image-20220805155119838" style="zoom:67%;" />
-
-<img src="image.assets/image-20220805155148069.png" alt="image-20220805155148069" style="zoom:67%;" />
-
-
-
-#### 1.2 常用函数
-
-通过`=`开头表示函数
-
-通过`$`锁定指定行/列，在拖拽是其值不会变，eg =$B15 列锁定为B，=B$15 行锁定为15
-
-
-
-##### **（1）SUM**
-
-求和
-
-SUM(列/行)   eg A:A
-
-SUM(单/多个单元格)   eg 左上:右下
-
-（通过`,`分隔多个区域）
-
-
-
-##### **（2）SUMIF**
-
-单条件求和
-
-SUMIF(criteria_range, criteria, [sum_range])
-
-SUMIF(条件判断区域, 条件, [求和的数值区域])
-
-（对于条件判断书写：`">="&value`）
-
-
-
-##### **（3）SUMIFS**
-
-多条件求和
-
-SUMIFS(sum_range, criteria_range, criteria, [criteria_range, criteria, ...])
-
-
-
-##### **（4）SUBTOTAL**
-
-根据原表格筛选进行计算（求和、均值、最值...）
-
-SUBTOTAL(function_num, ref1, [ref2, ...])
-
-
-
-##### **（5）IFS、IF**
-
-条件判断
-
-IFS([Something is True1, Value if True1,Something is True2,Value if True2,Something is True3,Value if True3)
-
-依次判断直至TRUE，关键字：`TRUE`
-
-
-
-IF(logical_test, value_if_true, value_if_false)
-
-（可嵌套）
-
-
-
-##### **（6）XLOOKUP、VLOOKUP**
-
-XLOOKUP(lookup_value, lookup_array, return_array)
-
-XLOOKUP(查找的值, 查找的区域, 返回值的区域)
-
-
-
-VLOOKUP(lookup_value, table_array, col_index_num, match_type)
-
-table_array：包含查找值的列（作为第一列）与返回值的列
-
-col_index_num: 返回值在table_array的第几列
-
-
-
-##### **（7）INDEX**
-
-返回数组指定坐标位置的值（坐标为0返回整行或整列）
-
-**INDEX(array, row_num, [column_num])**
-
-
-
-##### **（8）MATCH**
-
-返回数值指定值的坐标
-
-**MATCH(lookup_value, lookup_array, [match_type])**
-
-match_type：0为精确查找，1为近似查找最大的小于值，-1为最小的大于值
-
-
-
-**INDEX与MATCH常搭配使用**
-
-```excel
-=SUMIFS(INDEX('拌客源数据1-8月'!$A:$X,0,MATCH(G$111,'拌客源数据1-8月'!$1:$1,0)),'拌客源数据1-8月'!$I:$I,$B112)
-```
-
-
-
-##### **（9）DATE、YEAR、MONTH、DAY**
-
-计算日期
-
-```excel
-=DATE(YEAR(B39),MONTH(B39)+1,0)  // 每个月的最后一天
-```
-
-
-
-#### 1.3 数据报表
+####  1. 数据报表
 
 <img src="image.assets/image-20221002220918647.png" alt="image-20221002220918647" style="zoom:50%;" />
 
@@ -198,7 +38,13 @@ match_type：0为精确查找，1为近似查找最大的小于值，-1为最小
 
 
 
-### 二、Tableau
+### 2. Tableau Dash Board
+
+**Dash Board:**
+
+<img src="image.assets/image-20221002220614118.png" alt="image-20221002220614118" style="zoom:50%;" />
+
+<img src="image.assets/image-20221002220644682.png" alt="image-20221002220644682" style="zoom: 50%;" />
 
 #### 2.1 前言
 
@@ -394,19 +240,7 @@ match_type：0为精确查找，1为近似查找最大的小于值，-1为最小
 
 
 
-
-
-
-
 #### 2.3 仪表盘
-
-创建计算字段
-
-<img src="image.assets/image-20220815204412482.png" alt="image-20220815204412482" style="zoom:50%;" />
-
-
-
-
 
 **案例：外卖每日营收数据表**
 
@@ -428,15 +262,13 @@ match_type：0为精确查找，1为近似查找最大的小于值，-1为最小
 
 投放情况（散点图）
 
-<img src="image.assets/image-20221002220614118.png" alt="image-20221002220614118" style="zoom:50%;" />
-
-<img src="image.assets/image-20221002220644682.png" alt="image-20221002220644682" style="zoom: 50%;" />
 
 
 
 
 
-### 附录
+
+### 附录A. 统计量
 
 **GMV**（Gross Merchandise Volume）：商品交易总额，用来表示用户拍下后最终未支付的订单金额（包括拍下后放入购物车未支付的订单、取消的订单、拒收商品的订单和退货的订单）和拍下后已支付的订单金额之和
 
@@ -447,4 +279,168 @@ GMV = 销售额+取消订单金额+拒收订单金额+退货订单金额
 **UV**（Unique visitor）：访问网站的一台电脑客户端为一个访客（**一天内同个访客仅计算一次**）
 
 **PV**（Page visitor）：页面点击量（**累计用户对同一页面多次访问**）
+
+
+
+### 附录B. Excel 
+
+建立副本备份数据
+
+
+
+Ctrl + Shift + L 筛选器
+
+
+
+#### 1.1 数据透视图
+
+（1）插入空白数据透视
+
+<img src="image.assets/image-20220805153340250.png" alt="image-20220805153340250" style="zoom:80%;" />
+
+
+
+（2）设置数据透视图字段填充数据透视表
+
+<img src="image.assets/image-20220805153443145.png" alt="image-20220805153443145" style="zoom: 67%;" />
+
+<img src="image.assets/image-20220805154059968.png" alt="image-20220805154059968" style="zoom:67%;" />
+
+（3）插入自定义计算字段
+
+<img src="image.assets/image-20220805153806196.png" alt="image-20220805153806196" style="zoom: 67%;" />
+
+<img src="image.assets/image-20220805154145800.png" alt="image-20220805154145800" style="zoom:67%;" />
+
+（4）插入悬浮切片器（同时应用于其他sheet）
+
+<img src="image.assets/image-20220805153915564.png" alt="image-20220805153915564" style="zoom:67%;" />
+
+<img src="image.assets/image-20220805154003374.png" alt="image-20220805154003374" style="zoom:67%;" />
+
+
+
+
+
+（5）数据透视图
+
+<img src="image.assets/image-20220805155119838.png" alt="image-20220805155119838" style="zoom:67%;" />
+
+<img src="image.assets/image-20220805155148069.png" alt="image-20220805155148069" style="zoom:67%;" />
+
+
+
+#### 1.2 常用函数
+
+通过`=`开头表示函数
+
+通过`$`锁定指定行/列，在拖拽是其值不会变，eg =$B15 列锁定为B，=B$15 行锁定为15
+
+
+
+**（1）SUM**
+
+求和
+
+SUM(列/行)   eg A:A
+
+SUM(单/多个单元格)   eg 左上:右下
+
+（通过`,`分隔多个区域）
+
+
+
+**（2）SUMIF**
+
+单条件求和
+
+SUMIF(criteria_range, criteria, [sum_range])
+
+SUMIF(条件判断区域, 条件, [求和的数值区域])
+
+（对于条件判断书写：`">="&value`）
+
+
+
+**（3）SUMIFS**
+
+多条件求和
+
+SUMIFS(sum_range, criteria_range, criteria, [criteria_range, criteria, ...])
+
+
+
+**（4）SUBTOTAL**
+
+根据原表格筛选进行计算（求和、均值、最值...）
+
+SUBTOTAL(function_num, ref1, [ref2, ...])
+
+
+
+**（5）IFS、IF**
+
+条件判断
+
+IFS([Something is True1, Value if True1,Something is True2,Value if True2,Something is True3,Value if True3)
+
+依次判断直至TRUE，关键字：`TRUE`
+
+
+
+IF(logical_test, value_if_true, value_if_false)
+
+（可嵌套）
+
+
+
+**（6）XLOOKUP、VLOOKUP**
+
+XLOOKUP(lookup_value, lookup_array, return_array)
+
+XLOOKUP(查找的值, 查找的区域, 返回值的区域)
+
+
+
+VLOOKUP(lookup_value, table_array, col_index_num, match_type)
+
+table_array：包含查找值的列（作为第一列）与返回值的列
+
+col_index_num: 返回值在table_array的第几列
+
+
+
+**（7）INDEX**
+
+返回数组指定坐标位置的值（坐标为0返回整行或整列）
+
+**INDEX(array, row_num, [column_num])**
+
+
+
+**（8）MATCH**
+
+返回数值指定值的坐标
+
+**MATCH(lookup_value, lookup_array, [match_type])**
+
+match_type：0为精确查找，1为近似查找最大的小于值，-1为最小的大于值
+
+
+
+**INDEX与MATCH常搭配使用**
+
+```excel
+=SUMIFS(INDEX('拌客源数据1-8月'!$A:$X,0,MATCH(G$111,'拌客源数据1-8月'!$1:$1,0)),'拌客源数据1-8月'!$I:$I,$B112)
+```
+
+
+
+**（9）DATE、YEAR、MONTH、DAY**
+
+计算日期
+
+```excel
+=DATE(YEAR(B39),MONTH(B39)+1,0)  // 每个月的最后一天
+```
 
